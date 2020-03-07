@@ -1,12 +1,17 @@
 export const photos = [
     {
+        src: "https://raw.githubusercontent.com/DPK101/my-static-assets/master/ArtPhotos/GokuFirstSuperSaiyan.png",
+        width: 5,
+        height: 4
+    },
+    {
         src: "https://raw.githubusercontent.com/DPK101/my-static-assets/master/ArtPhotos/BirdOnTreeInRain.png",
         width: 5,
         height: 3
     },
     {
         src: "https://raw.githubusercontent.com/DPK101/my-static-assets/master/ArtPhotos/Candle.png",
-        width: 4,
+        width: 5,
         height: 5
     },
     {
@@ -33,5 +38,15 @@ export const photos = [
         src: "https://raw.githubusercontent.com/DPK101/my-static-assets/master/ArtPhotos/RedWineColor.png",
         width: 5,
         height: 4
+    },
+    {
+        src: "https://raw.githubusercontent.com/DPK101/my-static-assets/master/ArtPhotos/CapsicumEnhanced.png",
+        width: 5,
+        height: 4
+    },
+    {
+        src: "https://raw.githubusercontent.com/DPK101/my-static-assets/master/ArtPhotos/cheethaHuntingDeer.jpg",
+        width: 5,
+        height: 3
     }
 ];

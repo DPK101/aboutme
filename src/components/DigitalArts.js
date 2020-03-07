@@ -4,7 +4,7 @@ import ArtPhotos from './ArtPhotos';
 export default function DigitalArts() {
     return (
         <div>
-            DigitalArts
+            {/* DigitalArts */}
             {/* Using react-photo-gallery and react-images libraries*/}
             <ArtPhotos />
         </div>

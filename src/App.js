@@ -18,15 +18,22 @@ class App extends React.Component {
       <div>
         <Router>
           <nav className="navbar">
-            <Link to="/" className="left-nav-link nav-link">Home</Link>
+            {/* <Link to="/aboutme" className="left-nav-link nav-link"> */}
+              {/* About Me */}
+              {/* <img src={'./home.png'} alt="homelogo" /> */}
+            {/* </Link> */}
             <div className="right-nav-link">
-              <Link to="/digital-arts" className="nav-link">Digital Art Works</Link>
-              <Link to="/photography" className="nav-link">Photography</Link>
+              {/* Below url should be /aboutme/digital-arts */}
+              <Link to="/aboutme" className="nav-link">Sketches</Link>
+              {/* <Link to="/aboutme/photography" className="nav-link">Photography</Link> */}
             </div>
           </nav>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/digital-arts" component={DigitalArts} />
-          <Route exact path="/photography" component={Photography} />
+          {/* <Route exact path="/aboutme" component={Home} /> */}
+          <Route exact path="/aboutme" component={DigitalArts} /> {/* <- Bug */}
+          
+          {/* <- Reloading url /aboutme/digital-arts causing 404 on github due to server side rendering, so introduced above bug intentionally */}
+          <Route exact path="/aboutme/digital-arts" component={DigitalArts} />
+          <Route exact path="/aboutme/photography" component={Photography} />
         </Router>
       </div>
     );

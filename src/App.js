@@ -1,7 +1,7 @@
 import React from 'react';
 import ArtPhotos from './components/ArtPhotos';
 import './App.css';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
 import Home from './components/Home';
 import DigitalArts from './components/DigitalArts';
 import Photography from './components/Photography';
@@ -24,12 +24,22 @@ class App extends React.Component {
             {/* </Link> */}
             <div className="right-nav-link">
               {/* Below url should be /aboutme/digital-arts */}
-              <Link to="/aboutme" className="nav-link">Sketches</Link>
+                <Link to="/aboutme/digital-arts" className="nav-link">Sketches</Link>
               {/* <Link to="/aboutme/photography" className="nav-link">Photography</Link> */}
             </div>
           </nav>
           {/* <Route exact path="/aboutme" component={Home} /> */}
-          <Route exact path="/aboutme" component={DigitalArts} /> {/* <- Bug */}
+          <Route exact path="/" render={() => {
+            return (
+              <Redirect to='/aboutme/digital-arts' />
+            )
+          }} />
+          <Route exact path="/aboutme" render={() => {
+            return (
+              <Redirect to='/aboutme/digital-arts' />
+            )
+          }}/>
+          {/* <Route exact path="/aboutme" component={DigitalArts} /> <- Bug */}
           
           {/* <- Reloading url /aboutme/digital-arts causing 404 on github due to server side rendering, so introduced above bug intentionally */}
           <Route exact path="/aboutme/digital-arts" component={DigitalArts} />
